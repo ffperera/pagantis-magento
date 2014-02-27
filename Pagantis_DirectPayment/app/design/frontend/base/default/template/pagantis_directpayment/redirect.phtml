@@ -1,0 +1,29 @@
+<h3 style="margin-top: 20px;"><?php echo $this->__('You will be redirected to Pagantis secure payment gateway.'); ?></h3>
+<p style="margin-bottom: 20px;"><?php echo $this->__('If your browser does not redirect in a few seconds, please click the button bellow. Thanks.'); ?></p>
+<?php 
+    
+    // show form with hidden fields
+    echo $this->getFormRedirect(); 
+    
+    /* <input class="button" name="goPagantis" type="submit" value="<?php echo $this->__('Go to Pagantis') ?>" /> */
+?>
+
+
+
+<script type="text/javascript">
+    window.onload=function(){
+        var auto = setTimeout(function(){ submitformPagantis(); }, 1000);
+
+        function submitformPagantis(){
+            
+          	if(document.pagantis_directpayment) {
+                objForm = document.pagantis_directpayment;
+            } else {
+                objForm = document.getElementById("pagantis_directpayment");
+            }
+          
+          objForm.submit();
+        }
+
+    }
+</script>

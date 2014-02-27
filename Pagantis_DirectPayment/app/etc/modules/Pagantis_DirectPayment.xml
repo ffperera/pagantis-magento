@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Pagantis_DirectPayment>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Pagantis_DirectPayment>
+    </modules>
+</config>
